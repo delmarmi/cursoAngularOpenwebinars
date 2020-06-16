@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-correos.component.scss']
 })
 export class ListaCorreosComponent implements OnInit {
-
+	correos=[]
   constructor()  {
     const correo1 = {
       titulo: "Titulo del 1",
