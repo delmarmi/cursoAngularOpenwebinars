@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-correos.component.scss']
 })
 export class ListaCorreosComponent implements OnInit {
-	correos=[]
+	correos:any[];
+  responder:boolean;
+  correoAResponder: any;
+
   constructor()  {
     const correo1 = {
       titulo: "Titulo del 1",
@@ -28,9 +31,16 @@ export class ListaCorreosComponent implements OnInit {
     this.correos = [];
     this.correos.push(correo1);
     this.correos.push(correo2);
+
+    this.responder = false;
   }
 
   ngOnInit(): void {
+  }
+
+  clickResponder(correo) {
+    this.responder = !this.responder;
+    this.correoAResponder = correo;
   }
 
 }
