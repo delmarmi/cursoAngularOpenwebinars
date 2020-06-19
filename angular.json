@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practica1": {
+    "cursoIniciacionAngular8": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/practica1",
+            "outputPath": "dist/cursoIniciacionAngular8",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -45,6 +45,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -53,11 +54,6 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
                 }
               ]
             }
@@ -66,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "practica1:build"
+            "browserTarget": "cursoIniciacionAngular8:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "practica1:build:production"
+              "browserTarget": "cursoIniciacionAngular8:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "practica1:build"
+            "browserTarget": "cursoIniciacionAngular8:build"
           }
         },
         "test": {
@@ -114,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "practica1:serve"
+            "devServerTarget": "cursoIniciacionAngular8:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "practica1:serve:production"
+              "devServerTarget": "cursoIniciacionAngular8:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "practica1"
+  "defaultProject": "cursoIniciacionAngular8"
 }
